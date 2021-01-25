@@ -6,7 +6,7 @@ layout: default
 
 > and take pride in fixing it back. 
 
-### I love working with different operating systems and a keen learner of system and network security.
+### I love working with different operating systems and am a keen learner of system and network security.
 
 ---
 
