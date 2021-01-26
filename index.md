@@ -2,38 +2,39 @@
 layout: default
 ---
 # Me
-### I am a computer science major undergrad. I love reading docs, messing up with my computer,
+### I am a computer science major undergrad. I love reading docs, writing blogs, messing up with my computer,
 
 > and take pride in fixing it back. 
 
-### I love working with different operating systems and am a keen learner of system and network security.
+### I love working with different operating systems and am a keen learner in system and network security.
 
 ---
 
 
-# My Weird Inventions
+# My Works
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
-
-*   **Blogging Website using Django:**
-A simple blogging site hosted on pythonanywhere.com using django.
-_[Details](https://github.com/rachejazz/Blog-using-Django)_
-
-*   **New Tab Extension:**
-Built a simple new tab extension that supports chrome and firefox browsers. Available on Firefox Add-ons.
-_[Details](https://github.com/rachejazz/extension)_
-
-*   **GNU toolchain on InterProcess Communication(IPC):**
-Built a semi-system of two processes and studied every possible route of process handling using signals and shared memory segments.
-_[Details](https://github.com/rachejazz/IPCwithGNU)_
 
 *   **Hardware implentation: A Computer from scratch:**
 A project that mainly focuses on building a computer right from scratch, starting from the level of gates to registers, to reaching CPU and the assembler. A hardware based project, have the knowledge of assembly language(8085, 8086, x86, hack).
 _[Details](https://github.com/rachejazz/nand2tetris)_
 
+*   **GNU toolchain on InterProcess Communication(IPC):**
+Built a semi-system of two processes and studied every possible route of process handling using signals and shared memory segments.
+_[Details](https://github.com/rachejazz/IPCwithGNU)_
+
+*   **New Tab Extension:**
+Built a simple new tab extension that supports chrome and firefox browsers. Available on Firefox Add-ons.
+_[Details](https://github.com/rachejazz/extension)_
+
+*   **Blogging Website using Django:**
+A simple blogging site hosted on pythonanywhere.com using django.
+_[Details](https://github.com/rachejazz/Blog-using-Django)_
+
+
 ---
 
 
-# What I Love Working On
+# I Love Working On
 ### Strongly believing on the **killful** phrase, I continue to venture further in
 *   UI and backend web - experienced in React library. Playing around flask servers and handle django based websites
 

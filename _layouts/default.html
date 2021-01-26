@@ -20,10 +20,9 @@
 
         <section id="downloads">
           {% if site.show_downloads %}
-            <a href="mailto:me@rachejazz.me" class="btn">Mail me</a>
-            <a href="https://twitter.com/rachejazz" class="btn">Twitter</a>
+            <a href="https://twitter.com/rachejazz" class="btn">Check out my Twitter</a>
           {% endif %}
-          <a href="https://github.com/rachejazz" class="btn btn-github"><span class="icon"></span>GitHub</a>
+          <a href="https://github.com/rachejazz" class="btn btn-github"><!--span class="icon"></span-->View my GitHub</a>
         </section>
       </div>
     </header>
@@ -31,7 +30,8 @@
     <div class="container">
       <section id="main_content">
         {{ content }}
-      </section>
+       {% include navigation.html %}
+     </section>
     </div>
 
     {% if site.google_analytics %}
