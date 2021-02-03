@@ -36,7 +36,7 @@ _[Details](https://github.com/rachejazz/Blog-using-Django)_
 
 # I Love Working On
 ### Strongly believing on the **killful** phrase, I continue to venture further in
-*   UI and backend web - experienced in React library. Playing around flask servers and handle django based websites
+*   UI and backend web - experienced in React library. Playing around with nginx/uswgi/flask and handling django websites
 
 *   Python, C being my front pocket materials, I have done promising work on js as well.
 
