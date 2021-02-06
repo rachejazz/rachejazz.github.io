@@ -53,7 +53,7 @@ _[Details](https://github.com/rachejazz/Blog-using-Django)_
 
 # Where Am I These Days?
 ### Might I say I have wonderful communities to give me opportunities to keep growing.
-*   **Dynopii — DevOps Engineer**
+*   **Dynopii — Jr. DevOps Engineer**
 (DECEMBER  2020 - PRESENT)
 Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
 
