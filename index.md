@@ -53,10 +53,6 @@ _[Details](https://github.com/rachejazz/Blog-using-Django)_
 
 # Where Am I These Days?
 ### Might I say I have wonderful communities to give me opportunities to keep growing.
-*   **Dynopii — Jr. DevOps Engineer**
-(DECEMBER  2020 - PRESENT)
-Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
-
 *   **Manning Publications  — Tech Content Moderator**
 (APRIL 2020 - PRESENT)
 Help Desk and attend readers purchasing IT books and maintaining the discussion forum of the books separately.
@@ -67,6 +63,13 @@ Event management, community outreach and security instructor in the developer co
 
 ---
 
+# My Past Positions
+### A list I don't wish to make longer :P
+*   **Dynopii — Jr. DevOps Engineer**
+(DECEMBER  2020 - PRESENT)
+Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
+
+---
 
 # My Social Engagement
 ### Always give back to the community. So here I go.
