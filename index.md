@@ -66,7 +66,7 @@ Event management, community outreach and security instructor in the developer co
 # My Past Positions
 ### A list I don't wish to make longer :P
 *   **Dynopii — Jr. DevOps Engineer**
-(DECEMBER  2020 - PRESENT)
+(DECEMBER  2020 - FEBRUARY 2021)
 Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
 
 ---
