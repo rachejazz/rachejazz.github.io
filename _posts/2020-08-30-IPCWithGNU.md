@@ -195,5 +195,5 @@ you need ❤.<br> If you’re interested in further reading, these are some nice
 starting points:
 
 <br> 
-[The Heisenberg Debugging Technology](https://sourceware.org/gdb/talks/esc-west-1999/)
+[The Heisenberg Debugging Technology](https://sourceware.org/gdb/talks/esc-west-1999/)<br>
 [The GNU C library](https://www.gnu.org/software/libc/manual/html_node/Introduction.html#Introduction)
