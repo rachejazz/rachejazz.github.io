@@ -3,18 +3,16 @@ title: GNU toolchain on InterProcess Communication(IPC)
 layout: posts
 author: Divya
 ---
-### Run, break, study, re-run, dump. The 3G from GNU tool chain is here to make your life easier.
+## Run, break, study, re-run, dump. The 3G from GNU tool chain is here to make your life easier.
 
 While gorging down your favorite snack, what tells your hands to stop before you
 die from overeating? Well thanks to our operating systems, we never need to
 check over our process queue to ensure everything is working smooth.
 
-![](https://cdn-images-1.medium.com/max/800/1*0x2oyDOACE8mgObB7tbibA.jpeg)
+### So does this box thingy in our hands also needs a check over it’s workflow?
 
-So does this box thingy in our hands also needs a check over it’s workflow?
-
-![](https://cdn-images-1.medium.com/max/800/1*CIjdZa3Zvh7WZd79aZduVA.jpeg)
-<br><span class="figcaption_hack">Just a screenshot of my dramatic phone’s log file.</span>
+![](https://cdn-images-1.medium.com/max/800/1*CIjdZa3Zvh7WZd79aZduVA.jpeg)<br>
+### Just a screenshot of my dramatic phone’s log file.
 
 What stops them from ***dying*** from overeating? While diagnosing disorders in
 us doesn’t require anatomizing ourselves, in the IT world there are tools that
@@ -34,7 +32,7 @@ of them.
 
 *****
 
-To investigate their business and their roles in systems development, we will
+### To investigate their business and their roles in systems development, we will
 now create a tiny subsystem of 2 processes communicating with each other.
 
 > I will summon the powers of IPC and SIGNALs to help me make them talk.
@@ -82,10 +80,8 @@ course of execution process using gdb.(Wait. Is that possible?) Compile using:
 
 *****
 
-Alright! Now that our mini ecosystem is created, we employ the 3G to analyse
-what’s going on. Execute them to make them talk. You can either execute them in
-2 different windows, or use the following to send neighbour1 to background and
-execute them simultaneously:
+### Alright! Now that our mini ecosystem is created, we employ the 3G to analyse what’s going on. Execute them to make them talk. 
+You can either execute them in 2 different windows, or use the following to send neighbour1 to background and execute them simultaneously:
 
     $./neighbour1 & ./neighbour2
 
@@ -114,7 +110,7 @@ Here’s a snippet for you to relate:
 <span class="figcaption_hack">neighbour1.c.gcov</span>
 
 Owkay..time for repentance. Now it’s time to employ `gdb` . Did you notice that
-the user opted to spare the life of his fellow neighbour.
+the user opted to spare the life of his fellow neighbour?
 
 > Can’t he be let go once? A second chance? Why so cruel?
 
@@ -124,7 +120,7 @@ executed? Of course input data is received, there shouldn’t be any way you can
 change values of variables while they’re still inside your process memory?
 However `gdb` can do it for you! Here’s how:
 
-<span class="figcaption_hack">code injection with gdb to change value of variables</span>
+Code injection with gdb to change value of variables:
 [Demo on youtube.com](https://youtu.be/sUqmS0sUaFo)
 
 * Invoke debugging using `gdb ./neighbour2` . Now we create 2 *stops* in the
