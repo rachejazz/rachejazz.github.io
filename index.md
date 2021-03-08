@@ -14,7 +14,7 @@ layout: default
 # My Works
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
 
-*   **Hardware implentation - A Computer from scratch:**
+*   **Hardware implementation - A Computer from scratch:**
 A project that mainly focuses on building a computer right from scratch, starting from the level of gates to registers, to reaching CPU and the assembler. A hardware based project, have the knowledge of assembly language(8085, 8086, x86, hack).
 _[Details](https://github.com/rachejazz/nand2tetris)_
 
