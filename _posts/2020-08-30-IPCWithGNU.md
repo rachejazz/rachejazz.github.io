@@ -2,6 +2,8 @@
 title: GNU toolchain on InterProcess Communication(IPC)
 layout: posts
 author: Divya
+youtubeId1: yd2oAlZPoSk
+youtubeId2: sUqmS0sUaFo
 ---
 ## Run, break, study, re-run, dump. The 3G from GNU tool chain is here to make your life easier.
 
@@ -89,7 +91,7 @@ Both of them should work. Now, what will a normal user do to a process annoying
 him? Kill? Kidnap? Let’s see:
 
 <span class="figcaption_hack">user sending kidnap or kill instruction.</span>
-[Demo on youtube.com](https://youtu.be/yd2oAlZPoSk)
+{% include videoembed.html id=page.youtubeId1 %}
 
 So we see process 2 ended up killing process 1. Although just before getting
 killed neighbour 1 dumped his execution logs. Let’s analyze that. Remember gcov?
@@ -121,7 +123,7 @@ change values of variables while they’re still inside your process memory?
 However `gdb` can do it for you! Here’s how:
 
 Code injection with gdb to change value of variables:
-[Demo on youtube.com](https://youtu.be/sUqmS0sUaFo)
+{% include videoembed.html id=page.youtubeId2 %}
 
 * Invoke debugging using `gdb ./neighbour2` . Now we create 2 *stops* in the
 program where we can examine the value of the variables. Create breakpoints at
