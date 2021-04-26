@@ -14,6 +14,15 @@ layout: default
 # My Works
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
 
+*	**OWASP Maryam, OSINT Framework:**
+Maryam is a dedicated fast growing OSINT framework capable of scraping and gathering large amount of Data. Including
+subdomains and dns records. A project under OWASP.
+_[Details](https://github.com/rachejazz/OWASP-Maryam)_
+
+*	**CSP Bypass, File Forensics:**
+A small project focussed on how polyglot files can be taken advantage in bypass CSP rules for Reflected XSS attacks.
+_[Details](https://github.com/rachejazz/csp-xss-demo)_
+
 *   **Hardware implementation - A Computer from scratch:**
 A project that mainly focuses on building a computer right from scratch, starting from the level of gates to registers, to reaching CPU and the assembler. A hardware based project, have the knowledge of assembly language(8085, 8086, x86, hack).
 _[Details](https://github.com/rachejazz/nand2tetris)_
@@ -73,6 +82,11 @@ Working on containerizing and infrastructure setup, auto deployment and troubles
 
 # My Social Engagement
 ### Always give back to the community. So here I go.
+
+*	**Pycon India, Co-Organizer**
+(AUGUST 2021)
+Spreading the love of Python communities.
+
 *   **CTF Challenge Creator and Community Staff, Omicronctf — Community Moderator and Forensics challenges creator**
 (SEPTEMBER 2020 - NOVEMBER 2020)
 A newly formed community, focussed on creating ctf challenges for people new to infosec training.
