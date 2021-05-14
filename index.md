@@ -21,7 +21,7 @@ _[Details](https://github.com/rachejazz/OWASP-Maryam)_
 
 *	**Bypassing CSP, File Forensics:**
 A small project focussed on how polyglot files can be taken advantage of in bypassing CSP rules for Reflected XSS attacks.
-_[Details](https://github.com/rachejazz/csp-xss-demo)_
+_[Details](https://rachejazz.me/2021/05/14/AbusingCSP.html)_
 
 *   **Hardware implementation - A Computer from scratch:**
 A project that mainly focuses on building a computer right from scratch, starting from the level of gates to registers, to reaching CPU and the assembler. A hardware based project, have the knowledge of assembly language(8085, 8086, x86, hack).
