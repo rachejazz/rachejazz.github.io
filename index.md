@@ -14,13 +14,13 @@ layout: default
 # My Works
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
 
-*	**OWASP Maryam, OSINT Framework:**
+*	**OWASP Maryam, OSINT Framework(Contributor):**
 Maryam is a dedicated fast growing OSINT framework capable of scraping and gathering large amount of Data. Including
-subdomains and dns records. A project under OWASP.
+subdomains and dns records. A project under OWASP. There are several modules added by me.
 _[Details](https://github.com/rachejazz/OWASP-Maryam)_
 
-*	**CSP Bypass, File Forensics:**
-A small project focussed on how polyglot files can be taken advantage in bypass CSP rules for Reflected XSS attacks.
+*	**Bypassing CSP, File Forensics:**
+A small project focussed on how polyglot files can be taken advantage of in bypassing CSP rules for Reflected XSS attacks.
 _[Details](https://github.com/rachejazz/csp-xss-demo)_
 
 *   **Hardware implementation - A Computer from scratch:**
@@ -34,11 +34,6 @@ _[Details](https://github.com/rachejazz/IPCwithGNU)_
 *   **New Tab Extension:**
 Built a simple new tab extension that supports chrome and firefox browsers. Available on Firefox Add-ons.
 _[Details](https://github.com/rachejazz/extension)_
-
-*   **Blogging Website using Django:**
-A simple blogging site hosted on pythonanywhere.com using django.
-_[Details](https://github.com/rachejazz/Blog-using-Django)_
-
 
 ---
 
@@ -62,6 +57,10 @@ _[Details](https://github.com/rachejazz/Blog-using-Django)_
 
 # Where Am I These Days?
 ### Might I say I have wonderful communities to give me opportunities to keep growing.
+*	**LFX Mentee'21, Open Mainframe Project, IBM, The Linux Foundation**
+(MAY 2021 - PRESENT)
+Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
+
 *   **Manning Publications  — Tech Content Moderator**
 (APRIL 2020 - PRESENT)
 Help Desk and attend readers purchasing IT books and maintaining the discussion forum of the books separately.
@@ -95,7 +94,7 @@ A newly formed community, focussed on creating ctf challenges for people new to 
 (OCTOBER 2020)
 Second biggest international conference for cybersecurity professionals. A helpdesk and village & contest moderator for the 2020 conference.
 
-*   **Devfest Kolkata 2020  — Social Media Coordinator**
+*   **Devfest Kolkata '19  — Social Media Coordinator**
 (4th-5th AUGUST 2019)
 Media outreach, event handling and help desk at the developers’ conference.
 
