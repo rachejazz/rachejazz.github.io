@@ -79,8 +79,7 @@ For instance,
 Now comes the interesting part. As we now know, every source and files are well thought of before they are loaded by the browser. Hmmm....
 Each file is defined by a `filetype`. That means js files are indentified as js by it's extention. 
 Well you just knew that till now. That would just mean you can open a png file on a pdf reader by just changing the extension from `.png` to `.pdf`.
-But it's not that easy. Don't believe it? Go click a picture of yourself, change the extension from `jpeg` to `pdf` and
-open on Acrobat. 
+But it's not that easy. Don't believe it? Go click a picture of yourself, change the extension from `.jpeg` to `.pdf` and open on Acrobat.
 
 > I TOLD YOU IT'S NOT THAT EASY. NOW CONCENTRATE HERE!
 
@@ -121,8 +120,9 @@ the instructions to test it yourself.
 polyglot: PDF document, version 1.5, 13 pages
 ```
 So we see it's "meant" to be a pdf file. We rename it into polyglot.html and polyglot.mp3
-And open it in a browser and a music player.
+And open it in a browser and a music player.<br><br>❗𝗦𝗢𝗨𝗡𝗗 𝗔𝗟𝗘𝗥𝗧❗
 {% include videoembed.html id=page.youtubeid1 %}
+Rick can give you jumpscares sometimes.
 Phew, now back to CSP.
 
 ### How can you use Polyglot files to bypass CSP?
