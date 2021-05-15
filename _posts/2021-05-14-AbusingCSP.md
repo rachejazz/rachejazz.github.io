@@ -5,7 +5,7 @@ author: Divya
 youtubeid1: S9kVrd-f8n8
 youtubeid2: N6UmpVxs7MM
 ---
-## Your Website might be the shiniest of all, however, do you have the correct 'policy' afterall?
+## Your website might be the shiniest of all, however, do you have the correct 'policy' afterall?
 
 ### Brief Intro
 Major companies and firms today can be seen with awesome websites to showcase their service.
@@ -114,7 +114,7 @@ I know you will be confused, so I already prepared a polyglot file for you. Scro
 yourself!
 In this example below, I have shown a file that can be opened as an html file, a pdf file and also a mp3 file. Follow
 the instructions to test it yourself.
-```
+```bash
 ┬─[divya at racharch in ~/a/c/s/f/x/payloads]─[G:master]
 ╰──> λ file polyglot #file command tells you what type of file it is by reading it's magic number
 polyglot: PDF document, version 1.5, 13 pages
@@ -138,14 +138,14 @@ And yes I know you are lazy to try it yourself. Following video is for you:
 As you observed in the `server.js` file, there is a directive to load only the scripts from it's own server but  no
 directives defined for loading images/gif. We made a file named `evil.gif`, where we put the followng contents: 
 <br>	`GIF89a/*<svg/onload=alert("Hi")>*/=alert(document.domain)//;`
-<br>We begin the file with the magic number of a gif file (and also name it as .gif), but then we use the same magic number
+<br>We begin the file with the magic number of a gif file (and also name it as `.gif`), but then we use the same magic number
 as a javascript variable to store a code that triggers an alert box with the server's internal IP!
 We also leave a commented svg payload if at all it gets requested as an text/HTML MIME type.
 This makes our payload to get uploaded in the server as a gif file but, if given between script tags (which otherwise wouldn't be loaded because of script-src 'self') triggers an XSS!
 
 ### Conclusion
-Nothing really. CSP is a still new concept in web security and is yet to be implemented in many websites. The Above test
-was successful in Chrome browsers. For Firefox, I had to remove the .gif extension as well. It depends with every
+Nothing really. CSP is a still new concept in web security and is yet to be implemented in many websites. The above test
+was successful in Chrome browsers. For Firefox, I had to remove the `.gif` extension as well. It depends with every
 browser how it handles the policy and what other headers are already set in it by default.
 Till then, the internet is a huge playground to try and test! Don't go to jail though.
 
