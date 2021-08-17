@@ -43,9 +43,9 @@ subdomains and dns records. A project under OWASP. There are several modules add
 _[Details](https://github.com/rachejazz/OWASP-Maryam)_
 
 *	**Software Discovery Tool by OpenMainframe Project**
-Maryam is a dedicated fast growing OSINT framework capable of scraping and gathering large amount of Data. Including
-subdomains and dns records. A project under OWASP. There are several modules added by me.
-_[Details](https://github.com/rachejazz/OWASP-Maryam)_
+Software Discovery Tool helps match developers with the best open source software that meets their needs. 
+Developers can search through open source software for zArchitecture/s390x for any Z operating system from any source, any repo, anywhere, in one place.
+_[Details](https://github.com/rachejazz/software-discovery-tool)_
 
 ---
 # I Love Working On
