@@ -14,10 +14,8 @@ layout: default
 # My Works
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
 
-*	**OWASP Maryam, OSINT Framework(Contributor):**
-Maryam is a dedicated fast growing OSINT framework capable of scraping and gathering large amount of Data. Including
-subdomains and dns records. A project under OWASP. There are several modules added by me.
-_[Details](https://github.com/rachejazz/OWASP-Maryam)_
+*	**Laufeyson, Domain Recon Framework(Ongoing):**
+Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
 
 *	**Bypassing CSP, File Forensics:**
 A small project focussed on how polyglot files can be taken advantage of in bypassing CSP rules for Reflected XSS attacks.
@@ -33,20 +31,28 @@ _[Details](https://github.com/rachejazz/IPCwithGNU)_
 
 *   **New Tab Extension:**
 Built a simple new tab extension that supports chrome and firefox browsers. Available on Firefox Add-ons.
-_[Details](https://github.com/rachejazz/extension)_
+_[Details](https://github.com/rachejazz/newtab-extension)_
 
 ---
 
+# Volunteered Contributions in OpenSource
+### As an indidual who supports and uses FOSS extensively, I have given my contributions in the following:
+*	**OWASP Maryam, OSINT Framework**
+Maryam is a dedicated fast growing OSINT framework capable of scraping and gathering large amount of Data. Including
+subdomains and dns records. A project under OWASP. There are several modules added by me.
+_[Details](https://github.com/rachejazz/OWASP-Maryam)_
 
+*	**Software Discovery Tool by OpenMainframe Project**
+Maryam is a dedicated fast growing OSINT framework capable of scraping and gathering large amount of Data. Including
+subdomains and dns records. A project under OWASP. There are several modules added by me.
+_[Details](https://github.com/rachejazz/OWASP-Maryam)_
+
+---
 # I Love Working On
 ### Strongly believing on the **killful** phrase, I continue to venture further in
 *   UI and backend web - experienced in React library. Playing around with nginx/uswgi/flask and handling django websites
 
 *   Python, C being my front pocket materials, I have done promising work on js as well.
-
-> btw i am a script kiddie too.
->
-> yep, that includes vim environment as well :P
 
 *   Linux kernel enthusiast, in a constant habit of writing bash/fish scripts to make life easier. My most recent work on computer arch makes me well-versed in x86 assembly too.
 
@@ -57,7 +63,7 @@ _[Details](https://github.com/rachejazz/extension)_
 
 # Where Am I These Days?
 ### Might I say I have wonderful communities to give me opportunities to keep growing.
-*	**LFX Mentee'21, Open Mainframe Project, IBM, The Linux Foundation**
+*	**LFX Mentee'21, Open Mainframe Project, IBM Z, The Linux Foundation**
 (MAY 2021 - PRESENT)
 Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
 
@@ -104,7 +110,9 @@ Media outreach, event handling and help desk at the developers’ conference.
 # My Talks
 ### More to reach out to! Always up for a good talk on security related topics.
 *   **Divulging your social profile — Open Source Intelligence**
-(28th NOVEMBER 2020)
-Telling the world who you are is fun but what happens when someone uses it against you?
+(NOVEMBER 2020)
 _[Talk Link](https://www.youtube.com/watch?v=GS1aFM_8P98)_
-_[Presentation Link](http://github.com/rachejazz/OSINT)_
+
+*   **Dumb Browser ft. Smart Policy**
+(JUNE 2021)
+_[Talk Link](https://youtu.be/vxL0YvMKLyU?t=13170)_
