@@ -63,9 +63,9 @@ _[Details](https://github.com/rachejazz/software-discovery-tool)_
 
 # Where Am I These Days?
 ### Might I say I have wonderful communities to give me opportunities to keep growing.
-*	**LFX Mentee'21, Open Mainframe Project, IBM Z, The Linux Foundation**
-(MAY 2021 - PRESENT)
-Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
+*	**Trell Experiences - DevSecOps Dept**
+(SEPTEMBER 2021 - PRESENT)
+Working in Automation and Cloud, scanning infra for vulnerabilities, setting up monitoring tools.
 
 *   **Manning Publications  — Tech Content Moderator**
 (APRIL 2020 - PRESENT)
@@ -79,6 +79,10 @@ Event management, community outreach and security instructor in the developer co
 
 # My Past Positions
 ### A list I don't wish to make longer :P
+*	**LFX Mentee'21, Open Mainframe Project, IBM Z, The Linux Foundation**
+(MAY 2021 - SEPTEMBER 2021)
+Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
+
 *   **Dynopii — Jr. DevOps Engineer**
 (DECEMBER  2020 - FEBRUARY 2021)
 Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
@@ -116,3 +120,16 @@ _[Talk Link](https://www.youtube.com/watch?v=GS1aFM_8P98)_
 *   **Dumb Browser ft. Smart Policy**
 (JUNE 2021)
 _[Talk Link](https://youtu.be/vxL0YvMKLyU?t=13170)_
+
+*   **Looking for Open Source Software on Z?**
+(SEPTEMBER 2021)
+_[Talk Link](https://www.youtube.com/watch?v=w6jvOoz6LJg)_
+
+*   **Who Begat Python?**
+(SEPTEMBER 2021)
+_[Talk Link](https://www.youtube.com/watch?v=Xl6kj0rgU0Y)_
+
+*   **Software Discovery Tool!**
+(SEPTEMBER 2021)
+_[Talk Link](https://youtu.be/_ShIWOXAUQ0?t=338)_
+
