@@ -17,6 +17,14 @@ layout: default
 *	**Laufeyson, Domain Recon Framework(Ongoing):**
 Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
 
+*	**DevSecOps-Automation-Monitoring:**
+Contains all types of automation scripts that can be used by Devops practisioners for automating daily workflows.
+_[Details](https://github.com/rachejazz/DevSecOps-Automation-and-Monitoring)_
+
+*	**Keka Reminder Bot:**
+A bot that is capable of sending scheduled messages (default telegram allows per message scheduling) which works for months with minimal memory consumption.
+_[Details](https://gist.github.com/rachejazz/a34b589da6677235390495c8f8068e6c)_
+
 *	**Bypassing CSP, File Forensics:**
 A small project focussed on how polyglot files can be taken advantage of in bypassing CSP rules for Reflected XSS attacks.
 _[Details](https://rachejazz.me/2021/05/14/AbusingCSP.html)_
@@ -50,13 +58,15 @@ _[Details](https://github.com/rachejazz/software-discovery-tool)_
 ---
 # I Love Working On
 ### Strongly believing on the **killful** phrase, I continue to venture further in
-*   UI and backend web - experienced in React library. Playing around with nginx/uswgi/flask and handling django websites
+*	Monitoring and Automating Cloud Services workflows. Have worked with EC2, ECR, ELB, S3, CloudWatch on AWS. Experience with IAM, policies and group management.
+
+*   Focussing on Kubernetes Security. Secret Management using Vault and Cluster hardening using kskan and monitoring using Falco. Proficient in docker environment workflow.
 
 *   Python, C being my front pocket materials, I have done promising work on js as well.
 
-*   Linux kernel enthusiast, in a constant habit of writing bash/fish scripts to make life easier. My most recent work on computer arch makes me well-versed in x86 assembly too.
+*   Linux kernel enthusiast, in a constant habit of writing bash/fish scripts to make life easier.
 
-*   Currently focussing on virtual env and containers. Dockerizing my area :)
+*   UI and backend web - experienced in React library. Playing around with nginx/uswgi/flask and handling django websites
 
 ---
 
@@ -70,10 +80,6 @@ Working in Automation and Cloud, scanning infra for vulnerabilities, setting up 
 *   **Manning Publications  — Tech Content Moderator**
 (APRIL 2020 - PRESENT)
 Help Desk and attend readers purchasing IT books and maintaining the discussion forum of the books separately.
-
-*   **DSC HIT — Outreach Team Director,  Core Team Member**
-(AUGUST 2018 - PRESENT)
-Event management, community outreach and security instructor in the developer community.
 
 ---
 
@@ -92,24 +98,37 @@ Working on containerizing and infrastructure setup, auto deployment and troubles
 # My Social Engagement
 ### Always give back to the community. So here I go.
 
+*	**GHC Scholar and OpenSource Mentor 2021**
+(SEPTEMBER 2021 - DECEMBER 2021)<br>
+Selected as a GHC scholar by AnitaBorg for 2021 for showing exemplary skills and quality as Women In Tech.
+Contributed to OpenSource World by contributing and getting selected as a mentor to guide new contributors to opensource world.
+
+*	**IBM Z Ambassador 2021**
+(SEPTEMBER 2021 - DECEMBER 2021)<br>
+Getting connected with professionals from IBM Z and explored the Mainframe ecosystem while developing leadership skills.
+
+*   **DSC HIT — Outreach Team Director,  Core Team Member**
+(AUGUST 2018 - SEPTEMBER 2021)<br>
+Event management, community outreach and security instructor in the developer community.
+
+
 *	**Pycon India, Co-Organizer**
-(AUGUST 2021)
+(AUGUST 2021)<br>
 Spreading the love of Python communities.
 
 *   **CTF Challenge Creator and Community Staff, Omicronctf — Community Moderator and Forensics challenges creator**
-(SEPTEMBER 2020 - NOVEMBER 2020)
+(SEPTEMBER 2020 - NOVEMBER 2020)<br>
 A newly formed community, focussed on creating ctf challenges for people new to infosec training.
 
 *   **Grayhat CON 2020 Helpdesk, Online — PreCon Training and Village & Contest Assistant**
-(OCTOBER 2020)
+(OCTOBER 2020)<br>
 Second biggest international conference for cybersecurity professionals. A helpdesk and village & contest moderator for the 2020 conference.
 
 *   **Devfest Kolkata '19  — Social Media Coordinator**
-(4th-5th AUGUST 2019)
+(4th-5th AUGUST 2019)<br>
 Media outreach, event handling and help desk at the developers’ conference.
 
 ---
-
 
 # My Talks
 ### More to reach out to! Always up for a good talk on security related topics.
