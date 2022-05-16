@@ -140,22 +140,25 @@ Media outreach, event handling and help desk at the developers’ conference.
 # My Talks
 ### More to reach out to! Always up for a good talk on security related topics.
 *   **Divulging your social profile — Open Source Intelligence**
-(NOVEMBER 2020)
+(NOVEMBER 2020) ONLINE
 _[Talk Link](https://www.youtube.com/watch?v=GS1aFM_8P98)_
 
 *   **Dumb Browser ft. Smart Policy**
-(JUNE 2021)
+(JUNE 2021) ONLINE
 _[Talk Link](https://youtu.be/vxL0YvMKLyU?t=13170)_
 
 *   **Looking for Open Source Software on Z?**
-(SEPTEMBER 2021)
+(SEPTEMBER 2021) ONLINE
 _[Talk Link](https://www.youtube.com/watch?v=w6jvOoz6LJg)_
 
 *   **Who Begat Python?**
-(SEPTEMBER 2021)
+(SEPTEMBER 2021) ONLINE
 _[Talk Link](https://www.youtube.com/watch?v=Xl6kj0rgU0Y)_
 
 *   **Software Discovery Tool!**
-(SEPTEMBER 2021)
+(SEPTEMBER 2021) ONLINE
 _[Talk Link](https://youtu.be/_ShIWOXAUQ0?t=338)_
 
+*	**Let Your Voice Assistant Deploy Your Code!**
+(MAY 2022) OFFLINE
+_[Project Link]_(https://github.com/rachejazz/hear-my-voice)
