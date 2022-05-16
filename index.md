@@ -161,4 +161,4 @@ _[Talk Link](https://youtu.be/_ShIWOXAUQ0?t=338)_
 
 *	**Let Your Voice Assistant Deploy Your Code!**
 (MAY 2022) OFFLINE
-_[Project Link]_(https://github.com/rachejazz/hear-my-voice)
+_[Project Link](https://github.com/rachejazz/hear-my-voice)_
