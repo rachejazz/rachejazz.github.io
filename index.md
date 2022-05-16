@@ -70,16 +70,15 @@ _[Details](https://github.com/rachejazz/software-discovery-tool)_
 
 ---
 
-
 # Where Am I These Days?
-### Might I say I have wonderful communities to give me opportunities to keep growing.
-*	**Trell Experiences - DevSecOps Dept**
-(SEPTEMBER 2021 - PRESENT)
-Working in Automation and Cloud, scanning infra for vulnerabilities, setting up monitoring tools.
+### My past positions in various companies.
+*	**INDmoney - DevOps Intern**
+(MARCH 2022 - PRESENT)
+Working in Automation and Cloud, setting up alerts, monitoring metrics.
 
-*   **Manning Publications  — Tech Content Moderator**
-(APRIL 2020 - PRESENT)
-Help Desk and attend readers purchasing IT books and maintaining the discussion forum of the books separately.
+*	**Open Mainframe Project, Software Discovery Tool - TSC Member**
+(SEPTEMBER 2021 - PRESENT)
+Part of the Steering Commitee, planning for the future of the project and it's improvements in the upcoming incubation period.
 
 ---
 
@@ -89,9 +88,17 @@ Help Desk and attend readers purchasing IT books and maintaining the discussion 
 (MAY 2021 - SEPTEMBER 2021)
 Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
 
-*   **Dynopii — Jr. DevOps Engineer**
+*   **Dynopii — Jr. DevOps Intern**
 (DECEMBER  2020 - FEBRUARY 2021)
 Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
+
+*	**Trell Experiences - DevSecOps Intern**
+(SEPTEMBER 2021 - MARCH 2022
+Working in Automation and Cloud, scanning infra for vulnerabilities, setting up monitoring tools.
+
+*   **Manning Publications  — Tech Content Moderator**
+(APRIL 2020 - APRIL 2022)
+Help Desk and attend readers purchasing IT books and maintaining the discussion forum of the books separately.
 
 ---
 
