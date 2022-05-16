@@ -71,7 +71,7 @@ _[Details](https://github.com/rachejazz/software-discovery-tool)_
 ---
 
 # Where Am I These Days?
-### My past positions in various companies.
+### My current positions in various companies/orrganisations.
 *	**INDmoney - DevOps Intern**
 (MARCH 2022 - PRESENT)
 Working in Automation and Cloud, setting up alerts, monitoring metrics.
@@ -83,7 +83,7 @@ Part of the Steering Commitee, planning for the future of the project and it's i
 ---
 
 # My Past Positions
-### A list I don't wish to make longer :P
+### Previous companies/orgaisations I have contributedd to.
 *	**LFX Mentee'21, Open Mainframe Project, IBM Z, The Linux Foundation**
 (MAY 2021 - SEPTEMBER 2021)
 Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
