@@ -104,6 +104,11 @@ Help Desk and attend readers purchasing IT books and maintaining the discussion 
 
 # My Social Engagement
 ### Always give back to the community. So here I go.
+*	**AWS Community Builer**
+(MARCH 2022 - PRESENT)<br>
+Selected as part of AWS 2022 Cohort while I learn more about Cloud based on AWS paid credits and getting a free attempt on my certification.
+Contributed to the Cloud Community by writing blogs and arranging meetups.
+
 
 *	**GHC Scholar and OpenSource Mentor 2021**
 (SEPTEMBER 2021 - DECEMBER 2021)<br>
