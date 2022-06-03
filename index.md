@@ -14,6 +14,10 @@ layout: default
 # My Works
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
 
+*	**Deploying application using Voice assistant driven pipeline:**
+A Voice-to-Code implementation where you can deploy/create and feature branch of an applications by completely using Alexa/Google Home.
+_[Details](https://github.com/rachejazz/hear-my-voice)_
+
 *	**Laufeyson, Domain Recon Framework(Ongoing):**
 Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
 
