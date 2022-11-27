@@ -2,7 +2,7 @@
 layout: default
 ---
 # Me
-### I am a computer science major undergrad. I love reading docs, writing blogs, messing up with my computer,
+### I am a computer science major Postgrad. I love reading docs, writing blogs, messing up with my computer,
 
 > and take pride in fixing it back. 
 
@@ -20,6 +20,7 @@ _[Details](https://github.com/rachejazz/hear-my-voice)_
 
 *	**Laufeyson, Domain Recon Framework(Ongoing):**
 Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
+_[Details](https://github.com/rachejazz/Laufeyson)_
 
 *	**DevSecOps-Automation-Monitoring:**
 Contains all types of automation scripts that can be used by Devops practisioners for automating daily workflows.
@@ -62,23 +63,17 @@ _[Details](https://github.com/rachejazz/software-discovery-tool)_
 ---
 # I Love Working On
 ### Strongly believing on the **killful** phrase, I continue to venture further in
-*	Monitoring and Automating Cloud Services workflows. Have worked with EC2, ECR, ELB, S3, CloudWatch on AWS. Experience with IAM, policies and group management.
-
-*   Focussing on Kubernetes Security. Secret Management using Vault and Cluster hardening using kskan and monitoring using Falco. Proficient in docker environment workflow.
-
-*   Python, C being my front pocket materials, I have done promising work on js as well.
-
+*	Monitoring and Automating Cloud Services workflows. Have worked with various services on AWS and GCP. Experience with IAM, policies and group management.
+*   Focussing on Kubernetes and Docker Security. Secret Management and Rotation using Vault and Cluster hardening using kskan and monitoring using Falco. Proficient in docker environment workflow.
 *   Linux kernel enthusiast, in a constant habit of writing bash/fish scripts to make life easier.
-
-*   UI and backend web - experienced in React library. Playing around with nginx/uswgi/flask and handling django websites
 
 ---
 
 # Where Am I These Days?
 ### My current positions in various companies/orrganisations.
-*	**INDmoney - DevOps Intern**
-(MARCH 2022 - PRESENT)
-Working in Automation and Cloud, setting up alerts, monitoring metrics.
+*	**Workspan - Site Reliability Engineer**
+(JUNE 2022 - PRESENT)
+Working on Secops workflow, automation, infra security
 
 *	**Open Mainframe Project, Software Discovery Tool - TSC Member**
 (SEPTEMBER 2021 - PRESENT)
@@ -88,17 +83,21 @@ Part of the Steering Commitee, planning for the future of the project and it's i
 
 # My Past Positions
 ### Previous companies/orgaisations I have contributedd to.
+*	**INDmoney - DevOps Intern**
+(MARCH 2022 - JUNE 2022)
+Worked in Automation and Cloud, setting up alerts, monitoring metrics.
+
 *	**LFX Mentee'21, Open Mainframe Project, IBM Z, The Linux Foundation**
 (MAY 2021 - SEPTEMBER 2021)
 Got selected as a Summer Mentee at The Linux Foundation and working with IBM Mainframes ecosystem. My job is to mix open source software and linux in our daily workflows.
 
 *   **Dynopii — Jr. DevOps Intern**
 (DECEMBER  2020 - FEBRUARY 2021)
-Working on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
+Worked on containerizing and infrastructure setup, auto deployment and troubleshooting systems.
 
 *	**Trell Experiences - DevSecOps Intern**
 (SEPTEMBER 2021 - MARCH 2022
-Working in Automation and Cloud, scanning infra for vulnerabilities, setting up monitoring tools.
+Worked in Automation and Cloud, scanning infra for vulnerabilities, setting up monitoring tools.
 
 *   **Manning Publications  — Tech Content Moderator**
 (APRIL 2020 - APRIL 2022)
@@ -109,7 +108,7 @@ Help Desk and attend readers purchasing IT books and maintaining the discussion 
 # My Social Engagement
 ### Always give back to the community. So here I go.
 *	**AWS Community Builer**
-(MARCH 2022 - PRESENT)<br>
+(MARCH 2022 - MARCH 2023)<br>
 Selected as part of AWS 2022 Cohort while I learn more about Cloud based on AWS paid credits and getting a free attempt on my certification.
 Contributed to the Cloud Community by writing blogs and arranging meetups.
 
