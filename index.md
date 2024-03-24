@@ -6,21 +6,33 @@ layout: default
 
 > and take pride in fixing it back. 
 
-### I love working with different operating systems and am a keen learner in system and network security.
+### I love being curious about inner workings of an operating system and take pleasure in delving into system security.
 
 ---
 
 
 # My Works
-### I am a ~~skillful~~ killful developer, yet a curious researcher. I do a bit of UI fixing and mostly tinker around software loopholes. Some of my footprints:
+### I am a ~~skillful~~ killful developer, yet a curious researcher. I mostly tinker around low level architecture/how the internet works at OSI level/reverse engineering. Some of my footprints:
+
+*	**Laufeyson, Domain Recon Framework:**
+Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
+_[Details](https://github.com/rachejazz/Laufeyson)_
+
+*	**Bypassing CSP, File Forensics:**
+A small project focussed on how polyglot files can be taken advantage of in bypassing CSP rules for Reflected XSS attacks.
+_[Details](https://github.com/rachejazz/csp-xss-demo)_
+
+*   **GNU toolchain on InterProcess Communication(IPC):**
+Built a semi-system of two processes and studied every possible route of process handling using signals and shared memory segments.
+_[Details](https://github.com/rachejazz/IPCwithGNU)_
 
 *	**Deploying application using Voice assistant driven pipeline:**
 A Voice-to-Code implementation where you can deploy/create and feature branch of an applications by completely using Alexa/Google Home.
 _[Details](https://github.com/rachejazz/hear-my-voice)_
 
-*	**Laufeyson, Domain Recon Framework(Ongoing):**
-Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
-_[Details](https://github.com/rachejazz/Laufeyson)_
+*   **Hardware implementation - A Computer from scratch:**
+A project that mainly focuses on building a computer right from scratch, starting from the level of gates to registers, to reaching CPU and the assembler. A hardware based project, have the knowledge of assembly language(8085, 8086, x86, hack).
+_[Details](https://github.com/rachejazz/nand2tetris)_
 
 *	**DevSecOps-Automation-Monitoring:**
 Contains all types of automation scripts that can be used by Devops practisioners for automating daily workflows.
@@ -29,18 +41,6 @@ _[Details](https://github.com/rachejazz/DevSecOps-Automation-and-Monitoring)_
 *	**Keka Reminder Bot:**
 A bot that is capable of sending scheduled messages (default telegram allows per message scheduling) which works for months with minimal memory consumption.
 _[Details](https://gist.github.com/rachejazz/a34b589da6677235390495c8f8068e6c)_
-
-*	**Bypassing CSP, File Forensics:**
-A small project focussed on how polyglot files can be taken advantage of in bypassing CSP rules for Reflected XSS attacks.
-_[Details](https://rachejazz.me/2021/05/14/AbusingCSP.html)_
-
-*   **Hardware implementation - A Computer from scratch:**
-A project that mainly focuses on building a computer right from scratch, starting from the level of gates to registers, to reaching CPU and the assembler. A hardware based project, have the knowledge of assembly language(8085, 8086, x86, hack).
-_[Details](https://github.com/rachejazz/nand2tetris)_
-
-*   **GNU toolchain on InterProcess Communication(IPC):**
-Built a semi-system of two processes and studied every possible route of process handling using signals and shared memory segments.
-_[Details](https://github.com/rachejazz/IPCwithGNU)_
 
 *   **New Tab Extension:**
 Built a simple new tab extension that supports chrome and firefox browsers. Available on Firefox Add-ons.
@@ -63,17 +63,18 @@ _[Details](https://github.com/rachejazz/software-discovery-tool)_
 ---
 # I Love Working On
 ### Strongly believing on the **killful** phrase, I continue to venture further in
+*	Fuzz testing libraries, reading a emulating assembly with unicorn, reversing malware samples and analysis using FlareVM.
 *	Monitoring and Automating Cloud Services workflows. Have worked with various services on AWS and GCP. Experience with IAM, policies and group management.
-*   Focussing on Kubernetes and Docker Security. Secret Management and Rotation using Vault and Cluster hardening using kskan and monitoring using Falco. Proficient in docker environment workflow.
-*   Linux kernel enthusiast, in a constant habit of writing bash/fish scripts to make life easier.
+*   Kubernetes and Docker Security. Secret Management and Rotation using Vault and Cluster hardening using kskan and monitoring using Falco. Proficient in docker environment workflow.
+*   Linux kernel enthusiast, writing automation tools in bash and python to make life easier.
 
 ---
 
 # Where Am I These Days?
-### My current positions in various companies/orrganisations.
-*	**Workspan - Site Reliability Engineer**
-(JUNE 2022 - PRESENT)
-Working on Secops workflow, automation, infra security
+### My current positions in various companies/organisations.
+*	**MSc Cybersecurity, University of Birmingham, UK**
+(SEPTEMBER 2023 - PRESENT)
+Finishing my postgraduation working with Cryptopgraphy, Advanced Forensics and Malware Analysis.
 
 *	**Open Mainframe Project, Software Discovery Tool - TSC Member**
 (SEPTEMBER 2021 - PRESENT)
@@ -83,6 +84,11 @@ Part of the Steering Commitee, planning for the future of the project and it's i
 
 # My Past Positions
 ### Previous companies/orgaisations I have contributedd to.
+
+*	**Workspan - Site Reliability Engineer**
+(JUNE 2022 - PRESENT)
+Worked on GCP Security, GitSecOps workflow, automation, infra security
+
 *	**INDmoney - DevOps Intern**
 (MARCH 2022 - JUNE 2022)
 Worked in Automation and Cloud, setting up alerts, monitoring metrics.
@@ -107,11 +113,9 @@ Help Desk and attend readers purchasing IT books and maintaining the discussion 
 
 # My Social Engagement
 ### Always give back to the community. So here I go.
-*	**AWS Community Builer**
-(MARCH 2022 - MARCH 2023)<br>
-Selected as part of AWS 2022 Cohort while I learn more about Cloud based on AWS paid credits and getting a free attempt on my certification.
-Contributed to the Cloud Community by writing blogs and arranging meetups.
-
+*	**AWS Community Builder**
+(MARCH 2022 - MARCH 2023) and again (MARCH 2024 - MARCH 2025)<br>
+Selected as part of AWS 2022 and 2024 Cohort while I learn more about Cloud based on AWS paid credits and getting a free attempt on my certification. Contributed to the Cloud Community by writing blogs and arranging meetups.
 
 *	**GHC Scholar and OpenSource Mentor 2021**
 (SEPTEMBER 2021 - DECEMBER 2021)<br>
@@ -125,7 +129,6 @@ Getting connected with professionals from IBM Z and explored the Mainframe ecosy
 *   **DSC HIT — Outreach Team Director,  Core Team Member**
 (AUGUST 2018 - SEPTEMBER 2021)<br>
 Event management, community outreach and security instructor in the developer community.
-
 
 *	**Pycon India, Co-Organizer**
 (AUGUST 2021)<br>
