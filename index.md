@@ -15,7 +15,7 @@ layout: default
 ### I am a ~~skillful~~ killful developer, yet a curious researcher. I mostly tinker around low level architecture/how the internet works at OSI level/reverse engineering. Some of my footprints:
 *	**ARM processor emulation on Unicorn**
 Using Unicorn CPU emulator to emulate pico firmware and study assembly.
-_[Details]_(https://rachejazz.me/2024/03/24/UnicornEmulation.html)
+_[Details](https://rachejazz.me/2024/03/24/UnicornEmulation.html)_
 *	**Laufeyson, Domain Recon Framework:**
 Laufeyson is a dedicated fast growing Domain Recon framework capable of gathering intel on a domain or an IP.
 _[Details](https://github.com/rachejazz/Laufeyson)_
