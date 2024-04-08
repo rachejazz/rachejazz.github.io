@@ -88,7 +88,7 @@ Part of the Steering Commitee, planning for the future of the project and it's i
 ### Previous companies/orgaisations I have contributedd to.
 
 *	**Workspan - Site Reliability Engineer**
-(JUNE 2022 - PRESENT)
+(JUNE 2022 - AUGUST 2023)
 Worked on GCP Security, GitSecOps workflow, automation, infra security
 
 *	**INDmoney - DevOps Intern**
