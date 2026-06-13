@@ -60,6 +60,7 @@ body.music-theme {
     background-color: #f5f5f5;
     color: #2d2d2d;
     font-family: 'Cormorant Unicase', serif;
+    font-size: 20px;
 }
 
 .container {
@@ -131,7 +132,7 @@ header h1 {
 body.music-theme header h1 {
     color: #2d2d2d;
     text-shadow: none;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 400;
     margin-bottom: 8px;
 }
@@ -148,7 +149,7 @@ body.music-theme header h1 {
 body.music-theme .tagline {
     color: #888888;
     text-shadow: none;
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 12px;
 }
 
@@ -211,7 +212,7 @@ main h1 {
 body.music-theme main h1 {
     color: #2d2d2d;
     border-bottom: 1px solid transparent;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 400;
     margin: 16px 0 8px 0;
     padding-bottom: 6px;
@@ -227,6 +228,7 @@ main h2 {
 body.music-theme main h2 {
     color: #2d2d2d;
     font-weight: 400;
+    font-size: 22px;
 }
 
 main h3 {
@@ -239,7 +241,7 @@ main h3 {
 
 body.music-theme main h3 {
     color: #666666;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.6;
 }
 
