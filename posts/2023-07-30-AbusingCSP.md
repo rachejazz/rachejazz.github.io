@@ -18,9 +18,8 @@ so that the server can tailor a response.
 To check how a request is made for a webpage, open Inspector on your Browser, keep the Network tab open.
 Before you hit reload like a small kid, remember you're a developer(no? mail me let's talk!), keep calm and open the console too.
 If you're too lazy, this is where you see all types of http headers:
-<br><br><br>
-{% include inline_image.html file="/assets/show_headers.png" %}
-A better way to see headers on your cmd line is:
+<br>{% include inline_image.html file="/assets/show_headers.png" %}
+<br>A better way to see headers on your cmd line is:
 ```bash
 curl -I 'https://mywebsite.com'
 ```

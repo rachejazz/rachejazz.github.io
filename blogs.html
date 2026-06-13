@@ -469,6 +469,16 @@
                 return match; // If no video ID found, leave as is
             });
 
+            // Extract and protect inline images from Jekyll syntax
+            // {% include inline_image.html file="/assets/image.png" %}
+            // {% include inline_image_cons.html file="/assets/image.png" %}
+            html = html.replace(/\{%\s*include\s+inline_image(?:_cons)?\.html\s+file="([^"]+)"\s*%\}/g, function(match, imagePath) {
+                const placeholder = `___SAFE_${safeIndex}___`;
+                safeTags[safeIndex] = `<img src="${imagePath}" alt="" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0;">`;
+                safeIndex++;
+                return placeholder;
+            });
+
             // Extract and protect asciinema embed scripts (ONLY asciinema.org allowed)
             // Replace with placeholder divs that we'll convert to proper scripts later
             html = html.replace(/<script\s+[^>]*(?:src="https:\/\/asciinema\.org\/a\/(\d+)\.js"[^>]*id="asciicast-(\d+)"|id="asciicast-(\d+)"[^>]*src="https:\/\/asciinema\.org\/a\/(\d+)\.js")[^>]*><\/script>/gi, function(match, srcId1, asciiId1, asciiId2, srcId2) {
@@ -597,6 +607,10 @@
             html = html.replace(/(<\/ul>)<\/p>/g, '$1');
             html = html.replace(/<p>(<blockquote>)/g, '$1');
             html = html.replace(/(<\/blockquote>)<\/p>/g, '$1');
+            html = html.replace(/<p>(<img[^>]*>)/g, '$1');
+            html = html.replace(/(<img[^>]*>)<\/p>/g, '$1');
+            html = html.replace(/<p>(<div[^>]*>)/g, '$1');
+            html = html.replace(/(<\/div>)<\/p>/g, '$1');
 
             // Restore line breaks
             for (let i = 0; i < brIndex; i++) {
