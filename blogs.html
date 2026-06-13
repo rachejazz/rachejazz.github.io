@@ -39,7 +39,7 @@
 
         .blog-sidebar h2 {
             color: #50fa7b;
-            font-size: 11px;
+            font-size: 16px;
             margin: 0 0 10px 0;
             border-bottom: 1px solid #30363d;
             padding-bottom: 6px;
@@ -62,7 +62,7 @@
             cursor: pointer;
             border-radius: 3px;
             transition: background-color 0.3s ease;
-            font-size: 9px;
+            font-size: 13px;
         }
 
         .blog-tree li:before {
@@ -107,7 +107,7 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            font-size: 11px;
+            font-size: 16px;
         }
 
         body.music-theme .blog-content {
@@ -117,31 +117,31 @@
 
         /* Blog content typography */
         .blog-content h1 {
-            font-size: 14px;
+            font-size: 24px;
             margin: 15px 0 10px 0;
         }
 
         .blog-content h2 {
-            font-size: 12px;
+            font-size: 20px;
             margin: 12px 0 8px 0;
         }
 
         .blog-content h3 {
-            font-size: 11px;
+            font-size: 16px;
             margin: 10px 0 6px 0;
         }
 
         .blog-content p {
-            font-size: 11px;
+            font-size: 16px;
             line-height: 1.6;
         }
 
         .blog-content code {
-            font-size: 9px;
+            font-size: 14px;
         }
 
         .blog-content pre code {
-            font-size: 9px;
+            font-size: 14px;
         }
 
         /* Hamburger menu for mobile */
@@ -213,7 +213,7 @@
             display: block;
             color: #50fa7b;
             text-decoration: none;
-            font-size: 11px;
+            font-size: 14px;
             margin-bottom: 15px;
             transition: all 0.3s ease;
         }
@@ -231,7 +231,7 @@
             text-align: center;
             padding: 50px 20px;
             color: #8b949e;
-            font-size: 11px;
+            font-size: 16px;
         }
 
         body.music-theme .blog-placeholder {
@@ -279,7 +279,7 @@
         #post-content img {
             cursor: pointer;
             transition: opacity 0.3s ease;
-            max-width: 300px;
+            max-width: 600px;
             width: 100%;
             height: auto;
         }
@@ -316,24 +316,21 @@
         .youtube-embed {
             margin: 15px auto;
             max-width: 560px;
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
+            text-align: center;
         }
 
         .youtube-embed iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
+            max-width: 560px;
+            height: 315px;
             border: 0;
         }
 
         @media (max-width: 768px) {
-            .youtube-embed {
-                max-width: 100%;
+            .youtube-embed iframe {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16 / 9;
             }
         }
 
@@ -474,7 +471,7 @@
             // {% include inline_image_cons.html file="/assets/image.png" %}
             html = html.replace(/\{%\s*include\s+inline_image(?:_cons)?\.html\s+file="([^"]+)"\s*%\}/g, function(match, imagePath) {
                 const placeholder = `___SAFE_${safeIndex}___`;
-                safeTags[safeIndex] = `<img src="${imagePath}" alt="" style="max-width: 300px; width: 100%; height: auto; margin: 10px 0;">`;
+                safeTags[safeIndex] = `<img src="${imagePath}" alt="" style="max-width: 600px; width: 100%; height: auto; margin: 10px 0;">`;
                 safeIndex++;
                 return placeholder;
             });
@@ -783,8 +780,8 @@
                         if (titleMatch) {
                             title = titleMatch[1].trim();
                         }
-                        // Extract all youtubeId entries
-                        const youtubeMatches = frontmatter.matchAll(/^(youtubeId\w*):\s*(.+)$/gm);
+                        // Extract all youtubeId entries (case-insensitive)
+                        const youtubeMatches = frontmatter.matchAll(/^(youtubeid\w*):\s*(.+)$/gim);
                         for (const match of youtubeMatches) {
                             youtubeIds[match[1]] = match[2].trim();
                         }

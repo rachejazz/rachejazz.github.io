@@ -342,7 +342,7 @@ body.music-theme .collapsible-section {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 16px;
     padding: 4px 0;
     transition: color 0.3s ease;
 }
