@@ -1,13 +1,862 @@
----
-layout: blog_l
----
-<h1>My online /var/log directory</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - rachejazz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Blog layout container */
+        .blog-layout {
+            max-width: 1400px;
+            margin: 15px auto;
+            padding: 0 15px;
+        }
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+        /* Sidebar tree */
+        .blog-sidebar {
+            position: fixed;
+            left: 20px;
+            top: 80px;
+            width: 300px;
+            background-color: rgba(21, 21, 21, 0.4);
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+
+        body.music-theme .blog-sidebar {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid transparent;
+        }
+
+        .blog-sidebar h2 {
+            color: #50fa7b;
+            font-size: 11px;
+            margin: 0 0 10px 0;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 6px;
+        }
+
+        body.music-theme .blog-sidebar h2 {
+            color: #2d2d2d;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .blog-tree {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .blog-tree li {
+            margin: 4px 0;
+            padding: 4px 8px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            font-size: 9px;
+        }
+
+        .blog-tree li:before {
+            content: "";
+        }
+
+        body.music-theme .blog-tree li:before {
+            color: #2d2d2d;
+        }
+
+        .blog-tree li:hover {
+            background-color: rgba(80, 250, 123, 0.1);
+        }
+
+        body.music-theme .blog-tree li:hover {
+            background-color: rgba(45, 45, 45, 0.1);
+        }
+
+        .blog-tree li.active {
+            background-color: rgba(80, 250, 123, 0.2);
+            color: #50fa7b;
+        }
+
+        body.music-theme .blog-tree li.active {
+            background-color: rgba(45, 45, 45, 0.2);
+            color: #2d2d2d;
+        }
+
+        /* Main content area */
+        .blog-content {
+            position: fixed;
+            left: 340px;
+            top: 80px;
+            right: 20px;
+            background-color: rgba(21, 21, 21, 0.4);
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            height: calc(100vh - 180px);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            font-size: 11px;
+        }
+
+        body.music-theme .blog-content {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 1px solid transparent;
+        }
+
+        /* Blog content typography */
+        .blog-content h1 {
+            font-size: 14px;
+            margin: 15px 0 10px 0;
+        }
+
+        .blog-content h2 {
+            font-size: 12px;
+            margin: 12px 0 8px 0;
+        }
+
+        .blog-content h3 {
+            font-size: 11px;
+            margin: 10px 0 6px 0;
+        }
+
+        .blog-content p {
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+        .blog-content code {
+            font-size: 9px;
+        }
+
+        .blog-content pre code {
+            font-size: 9px;
+        }
+
+        /* Hamburger menu for mobile */
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background-color: transparent;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: #50fa7b;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        body.music-theme .hamburger span {
+            background-color: #2d2d2d;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .blog-sidebar {
+                left: -320px;
+                width: 280px;
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }
+
+            .blog-sidebar.open {
+                left: 0;
+            }
+
+            .blog-content {
+                left: 20px;
+                top: 80px;
+                right: 20px;
+            }
+
+            .blog-layout {
+                padding: 0;
+            }
+        }
+
+        /* Ensure content fills container */
+        .blog-content > * {
+            flex-shrink: 0;
+        }
+
+        #post-content,
+        .blog-placeholder {
+            flex: 1;
+        }
+
+        /* cd ~ command */
+        .cd-home {
+            display: block;
+            color: #50fa7b;
+            text-decoration: none;
+            font-size: 11px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .cd-home:hover {
+            text-decoration: underline;
+        }
+
+        body.music-theme .cd-home {
+            color: #2d2d2d;
+        }
+
+        /* Placeholder text */
+        .blog-placeholder {
+            text-align: center;
+            padding: 50px 20px;
+            color: #8b949e;
+            font-size: 11px;
+        }
+
+        body.music-theme .blog-placeholder {
+            color: #666666;
+        }
+
+        /* Post content */
+        #post-content {
+        }
+
+        /* Image lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            cursor: pointer;
+        }
+
+        .lightbox img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 4px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Make blog images clickable */
+        #post-content img {
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        #post-content img:hover {
+            opacity: 0.8;
+        }
+
+        /* Image with caption */
+        .image-with-caption {
+            display: inline-block;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .image-with-caption img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .figcaption_hack {
+            display: block;
+            margin-top: 5px;
+            font-size: 9px;
+            color: #8b949e;
+            font-style: italic;
+        }
+
+        body.music-theme .figcaption_hack {
+            color: #666666;
+        }
+
+        /* YouTube embed */
+        .youtube-embed {
+            margin: 15px auto;
+            max-width: 560px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .youtube-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .youtube-embed {
+                max-width: 100%;
+            }
+        }
+
+        /* Asciinema embeds */
+        .asciinema-placeholder,
+        #post-content .asciinema-player-wrapper,
+        #post-content asciinema-player {
+            max-width: 300px;
+            margin: 15px auto;
+            font-size: 8px;
+            transform: scale(0.5);
+            transform-origin: top center;
+        }
+
+        #post-content .asciinema-player {
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .asciinema-placeholder,
+            #post-content .asciinema-player-wrapper,
+            #post-content asciinema-player {
+                max-width: 100%;
+                transform: scale(0.85);
+                pointer-events: auto;
+                touch-action: auto;
+            }
+        }
+
+        /* Copy button for code blocks */
+        pre {
+            position: relative;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(139, 148, 158, 0.2);
+            color: #8b949e;
+            border: 1px solid #8b949e;
+            border-radius: 3px;
+            padding: 3px 6px;
+            font-size: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-button:hover {
+            background-color: rgba(139, 148, 158, 0.3);
+            color: #c9d1d9;
+        }
+
+        .copy-button.copied {
+            background-color: rgba(139, 148, 158, 0.3);
+            color: #c9d1d9;
+        }
+
+        body.music-theme .copy-button {
+            background-color: rgba(102, 102, 102, 0.2);
+            color: #666666;
+            border: 1px solid #666666;
+        }
+
+        body.music-theme .copy-button:hover {
+            background-color: rgba(102, 102, 102, 0.3);
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="game-of-life"></canvas>
+
+    <!-- Hamburger menu for mobile -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="blog-layout">
+        <!-- Sidebar tree -->
+        <aside class="blog-sidebar">
+            <a href="index.html" class="cd-home">cd ~</a>
+            <ul class="blog-tree" id="blog-tree">
+                <!-- Populated by JavaScript -->
+            </ul>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="blog-content">
+            <div class="blog-placeholder" id="blog-placeholder">
+                Select a blog post from the tree
+            </div>
+            <article id="post-content" style="display: none;"></article>
+        </main>
+    </div>
+
+    <!-- Image lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer>
+        <p>mail@rachejazz.me | <a href="https://github.com/rachejazz">@rachejazz</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple markdown parser
+        function parseMarkdown(markdown, youtubeIds = {}) {
+            let html = markdown;
+
+            // Store code blocks to protect them from other transformations
+            const codeBlocks = [];
+            let codeBlockIndex = 0;
+
+            // Store safe HTML tags before escaping
+            const safeTags = [];
+            let safeIndex = 0;
+
+            // Extract and protect YouTube embeds from Jekyll syntax
+            // {% include videoembed.html id=page.youtubeId1 %}
+            html = html.replace(/\{%\s*include\s+videoembed\.html\s+id=page\.(\w+)\s*%\}/g, function(match, idKey) {
+                const videoId = youtubeIds[idKey];
+                if (videoId) {
+                    const placeholder = `___SAFE_${safeIndex}___`;
+                    safeTags[safeIndex] = `<div class="youtube-embed"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+                    safeIndex++;
+                    return placeholder;
+                }
+                return match; // If no video ID found, leave as is
+            });
+
+            // Extract and protect asciinema embed scripts (ONLY asciinema.org allowed)
+            // Replace with placeholder divs that we'll convert to proper scripts later
+            html = html.replace(/<script\s+[^>]*(?:src="https:\/\/asciinema\.org\/a\/(\d+)\.js"[^>]*id="asciicast-(\d+)"|id="asciicast-(\d+)"[^>]*src="https:\/\/asciinema\.org\/a\/(\d+)\.js")[^>]*><\/script>/gi, function(match, srcId1, asciiId1, asciiId2, srcId2) {
+                // Extract cast ID from whichever group matched
+                const castId = srcId1 || srcId2 || asciiId1 || asciiId2;
+                const placeholder = `___SAFE_${safeIndex}___`;
+                safeTags[safeIndex] = `<div class="asciinema-placeholder" data-cast-id="${castId}"></div>`;
+                safeIndex++;
+                return placeholder;
+            });
+
+            // First, handle images with caption in span tags: [](url)\n<span class="figcaption_hack">caption</span>
+            // Do this BEFORE extracting safe tags, so we can process the whole pattern
+            html = html.replace(/\[\]\(([^\)]+)\)\s*\n?\s*<span class="figcaption_hack">([^<]+)<\/span>/g, function(match, url, caption) {
+                // Basic URL validation
+                if (url.match(/^(https?:\/\/|\/)/)) {
+                    const placeholder = `___SAFE_${safeIndex}___`;
+                    safeTags[safeIndex] = `<div class="image-with-caption"><img src="${url}" alt="${caption}"><span class="figcaption_hack">${caption}</span></div>`;
+                    safeIndex++;
+                    return placeholder;
+                }
+                return match;
+            });
+
+            // Protect safe tags: span, div, strong, em, b, i, u (with attributes)
+            // Match both self-closing and paired tags
+            html = html.replace(/<(span|div|strong|em|b|i|u)(\s+[^>]*)?>([\s\S]*?)<\/\1>/gi, function(match) {
+                const placeholder = `___SAFE_${safeIndex}___`;
+                safeTags[safeIndex] = match;
+                safeIndex++;
+                return placeholder;
+            });
+
+            // Protect <br> tags
+            const lineBreaks = [];
+            let brIndex = 0;
+            html = html.replace(/<br\s*\/?>/gi, function(match) {
+                const placeholder = `___BR_${brIndex}___`;
+                lineBreaks[brIndex] = '<br>';
+                brIndex++;
+                return placeholder;
+            });
+
+            // Extract and protect code blocks (```code```)
+            html = html.replace(/```(\w+)?\n?([\s\S]*?)```/g, function(match, lang, code) {
+                const placeholder = `___CODEBLOCK_${codeBlockIndex}___`;
+                // Escape HTML in code blocks to prevent XSS
+                const div = document.createElement('div');
+                div.textContent = code;
+                codeBlocks[codeBlockIndex] = `<pre><code>${div.innerHTML}</code></pre>`;
+                codeBlockIndex++;
+                return placeholder;
+            });
+
+            // Extract and protect inline code (`code`)
+            const inlineCode = [];
+            let inlineIndex = 0;
+            html = html.replace(/`([^`]+)`/g, function(match, code) {
+                const placeholder = `___INLINE_${inlineIndex}___`;
+                // Escape HTML in inline code to prevent XSS
+                const div = document.createElement('div');
+                div.textContent = code;
+                inlineCode[inlineIndex] = `<code>${div.innerHTML}</code>`;
+                inlineIndex++;
+                return placeholder;
+            });
+
+            // Escape any remaining HTML to prevent XSS
+            const div = document.createElement('div');
+            div.textContent = html;
+            html = div.innerHTML;
+
+            // Restore safe HTML tags immediately after escaping
+            for (let i = 0; i < safeIndex; i++) {
+                html = html.replace(`___SAFE_${i}___`, safeTags[i]);
+            }
+
+            // Now apply markdown transformations (these create safe HTML)
+            // Headers
+            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+
+            // Bold (**text**)
+            html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+            // Italic (*text*)
+            html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+            // Images ![alt](url) - sanitize URLs
+            html = html.replace(/!\[([^\]]*)\]\(([^\)]+)\)/g, function(match, alt, url) {
+                // Basic URL validation
+                if (url.match(/^(https?:\/\/|\/)/)) {
+                    return `<img src="${url}" alt="${alt}">`;
+                }
+                return alt; // If invalid URL, just return alt text
+            });
+
+            // Links [text](url) - sanitize URLs
+            html = html.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, function(match, text, url) {
+                // Basic URL validation to prevent javascript: urls
+                if (url.match(/^(https?:\/\/|\/|#)/)) {
+                    return `<a href="${url}">${text}</a>`;
+                }
+                return text; // If invalid URL, just return text
+            });
+
+            // Blockquotes (> text)
+            html = html.replace(/^&gt; (.+)$/gim, '<blockquote>$1</blockquote>');
+
+            // Unordered lists
+            html = html.replace(/^\* (.+)$/gim, '<li>$1</li>');
+            html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+
+            // Line breaks (double newline = paragraph)
+            html = html.replace(/\n\n/g, '</p><p>');
+            html = '<p>' + html + '</p>';
+
+            // Clean up empty paragraphs
+            html = html.replace(/<p><\/p>/g, '');
+            html = html.replace(/<p>(<h[1-6]>)/g, '$1');
+            html = html.replace(/(<\/h[1-6]>)<\/p>/g, '$1');
+            html = html.replace(/<p>(<pre>)/g, '$1');
+            html = html.replace(/(<\/pre>)<\/p>/g, '$1');
+            html = html.replace(/<p>(<ul>)/g, '$1');
+            html = html.replace(/(<\/ul>)<\/p>/g, '$1');
+            html = html.replace(/<p>(<blockquote>)/g, '$1');
+            html = html.replace(/(<\/blockquote>)<\/p>/g, '$1');
+
+            // Restore line breaks
+            for (let i = 0; i < brIndex; i++) {
+                html = html.replace(`___BR_${i}___`, lineBreaks[i]);
+            }
+
+            // Restore code blocks (already escaped)
+            for (let i = 0; i < codeBlockIndex; i++) {
+                html = html.replace(`___CODEBLOCK_${i}___`, codeBlocks[i]);
+            }
+
+            // Restore inline code (already escaped)
+            for (let i = 0; i < inlineIndex; i++) {
+                html = html.replace(`___INLINE_${i}___`, inlineCode[i]);
+            }
+
+            return html;
+        }
+
+        // Blog posts metadata
+        const blogs = [
+            {
+                id: "2024-03-24-UnicornEmulation",
+                title: "I got my hands on a Raspberry Pi Pico firmware.",
+                date: "2024-03-24",
+                file: "posts/2024-03-24-UnicornEmulation.md"
+            },
+            {
+                id: "2023-09-10-IPCWithGNU",
+                title: "IPC With GNU",
+                date: "2023-09-10",
+                file: "posts/2023-09-10-IPCWithGNU.md"
+            },
+            {
+                id: "2023-07-30-AbusingCSP",
+                title: "Abusing CSP",
+                date: "2023-07-30",
+                file: "posts/2023-07-30-AbusingCSP.md"
+            },
+            {
+                id: "2023-05-03-USBKernel",
+                title: "USB Kernel",
+                date: "2023-05-03",
+                file: "posts/2023-05-03-USBKernel.md"
+            },
+            {
+                id: "2022-05-23-AlexaDeploy",
+                title: "Alexa Deploy",
+                date: "2022-05-23",
+                file: "posts/2022-05-23-AlexaDeploy.md"
+            },
+            {
+                id: "2021-12-31-DistroSickness",
+                title: "Distro Sickness",
+                date: "2021-12-31",
+                file: "posts/2021-12-31-DistroSickness.md"
+            },
+            {
+                id: "2021-08-16-NmapFun",
+                title: "Nmap Fun",
+                date: "2021-08-16",
+                file: "posts/2021-08-16-NmapFun.md"
+            },
+            {
+                id: "2020-03-03-MalwareAnalysis",
+                title: "Malware Analysis",
+                date: "2020-03-03",
+                file: "posts/2020-03-03-MalwareAnalysis.md"
+            }
+        ];
+
+        function addCopyButtons() {
+            const codeBlocks = document.querySelectorAll('pre code');
+            codeBlocks.forEach((code) => {
+                const pre = code.parentElement;
+                if (pre.querySelector('.copy-button')) return;
+
+                const button = document.createElement('button');
+                button.className = 'copy-button';
+                button.textContent = 'Copy';
+                button.onclick = function(e) {
+                    e.preventDefault();
+                    navigator.clipboard.writeText(code.textContent).then(() => {
+                        button.textContent = 'Copied!';
+                        button.classList.add('copied');
+                        setTimeout(() => {
+                            button.textContent = 'Copy';
+                            button.classList.remove('copied');
+                        }, 2000);
+                    });
+                };
+                pre.appendChild(button);
+            });
+        }
+
+        function makeImagesClickable() {
+            const images = document.querySelectorAll('#post-content img');
+            images.forEach(img => {
+                img.onclick = function() {
+                    openLightbox(this.src);
+                };
+            });
+        }
+
+        function loadAsciinemaEmbeds() {
+            const placeholders = document.querySelectorAll('.asciinema-placeholder');
+            placeholders.forEach(placeholder => {
+                const castId = placeholder.getAttribute('data-cast-id');
+                if (castId) {
+                    // Create a wrapper div with inline styles
+                    const wrapper = document.createElement('div');
+                    wrapper.style.cssText = 'max-width: 600px; margin: 15px auto 0 auto; transform: scale(0.75); transform-origin: top center; margin-bottom: -100px;';
+
+                    // Create the script element dynamically so it executes
+                    const script = document.createElement('script');
+                    script.src = `https://asciinema.org/a/${castId}.js`;
+                    script.id = `asciicast-${castId}`;
+                    script.async = true;
+
+                    // Add script to wrapper
+                    wrapper.appendChild(script);
+
+                    // Replace the placeholder with the wrapper
+                    placeholder.parentNode.replaceChild(wrapper, placeholder);
+                }
+            });
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'block';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        function showBlogPost(blogId) {
+            const blog = blogs.find(b => b.id === blogId);
+            if (!blog) return;
+
+            // Update active state and change text of selected item
+            document.querySelectorAll('.blog-tree li').forEach(li => {
+                const liData = li.getAttribute('data-blog-id');
+                const liTitle = li.getAttribute('data-original-title');
+                if (liData === blogId) {
+                    li.classList.add('active');
+                    li.textContent = `ls /${blogId}/`;
+                } else {
+                    li.classList.remove('active');
+                    li.textContent = liTitle;
+                }
+            });
+
+            // Hide placeholder, show content
+            document.getElementById('blog-placeholder').style.display = 'none';
+            document.getElementById('post-content').style.display = 'block';
+            window.location.hash = blogId;
+
+            fetch(blog.file)
+                .then(response => response.text())
+                .then(markdown => {
+                    // Extract title and YouTube IDs from frontmatter
+                    let title = blog.title; // fallback to hardcoded title
+                    const youtubeIds = {};
+                    const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
+                    if (frontmatterMatch) {
+                        const frontmatter = frontmatterMatch[1];
+                        const titleMatch = frontmatter.match(/^title:\s*(.+)$/m);
+                        if (titleMatch) {
+                            title = titleMatch[1].trim();
+                        }
+                        // Extract all youtubeId entries
+                        const youtubeMatches = frontmatter.matchAll(/^(youtubeId\w*):\s*(.+)$/gm);
+                        for (const match of youtubeMatches) {
+                            youtubeIds[match[1]] = match[2].trim();
+                        }
+                    }
+
+                    const content = markdown.replace(/^---[\s\S]*?---\n/, '');
+                    const html = parseMarkdown(content, youtubeIds);
+                    document.getElementById('post-content').innerHTML = `
+                        <div class="blog-meta">Published on ${blog.date}</div>
+                        <h1>${title}</h1>
+                        ${html}
+                    `;
+                    addCopyButtons();
+                    makeImagesClickable();
+                    loadAsciinemaEmbeds();
+                })
+                .catch(error => {
+                    document.getElementById('post-content').innerHTML =
+                        '<p>Error loading blog post. Please try again later.</p>';
+                    console.error('Error loading blog:', error);
+                });
+        }
+
+        function renderBlogTree() {
+            // Fetch all blog posts to get real titles
+            const fetchPromises = blogs.map(blog =>
+                fetch(blog.file)
+                    .then(response => response.text())
+                    .then(markdown => {
+                        // Extract title from frontmatter
+                        let title = blog.title; // fallback
+                        const frontmatterMatch = markdown.match(/^---\n([\s\S]*?)\n---/);
+                        if (frontmatterMatch) {
+                            const frontmatter = frontmatterMatch[1];
+                            const titleMatch = frontmatter.match(/^title:\s*(.+)$/m);
+                            if (titleMatch) {
+                                title = titleMatch[1].trim();
+                            }
+                        }
+                        return { id: blog.id, title: title };
+                    })
+                    .catch(() => ({ id: blog.id, title: blog.title }))
+            );
+
+            Promise.all(fetchPromises).then(blogTitles => {
+                const treeHtml = blogTitles.map(blog => `
+                    <li data-blog-id="${blog.id}" data-original-title="${blog.title}" onclick="showBlogPost('${blog.id}')">${blog.title}</li>
+                `).join('');
+
+                document.getElementById('blog-tree').innerHTML = treeHtml;
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderBlogTree();
+
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.querySelector('.blog-sidebar');
+
+            hamburger.addEventListener('click', function() {
+                sidebar.classList.toggle('open');
+            });
+
+            // Close sidebar when clicking on a blog (mobile)
+            document.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768 && e.target.closest('.blog-tree li')) {
+                    sidebar.classList.remove('open');
+                }
+            });
+
+            // Check if there's a hash in URL
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showBlogPost(hash);
+            }
+        });
+
+        // Handle browser back/forward
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showBlogPost(hash);
+            }
+        });
+    </script>
+</body>
+</html>
