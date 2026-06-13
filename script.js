@@ -132,7 +132,7 @@ const musicContent = {
     headerTagline: "Work In Progress",
     mainContent: `
         <section>
-            <h3>Hey! you're found the hidden world of Almanac! Here we dont talk but speak, we dont hear, we listen and we dont look but see. This is Work in Progress section so come by later?</h3>
+            <h3>Hey! you've found the hidden world of Almanac! Here we dont talk but speak, we dont hear, we listen and we dont look but see. If you know the chorus, remember to sing it and we will meet again soon.</h3>
         </section>
     `
 };
